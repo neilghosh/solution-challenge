@@ -85,7 +85,7 @@ const {
       ],
     });
   
-    const result = await chatSession.sendMessage("Identify the bird and tell what is it called in Indian languages ");
+    const result = await chatSession.sendMessage("Identify this bird and tell what are they called in various indian languages including Bangla and Odia etc. Try to give in indian language script");
     return result.response.text();
   }
   

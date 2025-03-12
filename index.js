@@ -6,15 +6,18 @@ const upload = multer({ dest: 'uploads/' });
 
 const app = express();
 
-app.post('/',  upload.single('image'), async (req, res) => {
+app.post('/id',  upload.single('image'), async (req, res) => {
+  console.log("POST");
   const filepath = req.file.path;
-
   const response = await run(filepath);
+  console.log(response);
   res.send(response);
 });
 
-app.get('/', async (req, res) => {
-  res.send("Hello");
+
+app.get('/health', async (req, res) => {
+  console.log("Health");
+  res.send("UP");
 });
 
 const port = parseInt(process.env.PORT) || 3000;
