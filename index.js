@@ -1,5 +1,5 @@
 import express from 'express';
-import { run } from './gemini.cjs';
+import run from './gemini.js';
 import multer from 'multer';
 
 const upload = multer({ dest: 'uploads/' });
