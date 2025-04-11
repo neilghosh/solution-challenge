@@ -17,7 +17,12 @@ app.post('/id',  upload.single('image'), async (req, res) => {
 
 app.get('/health', async (req, res) => {
   console.log("Health");
-  res.send("UP");
+  res.send('{"status": "UP"}');
+});
+
+app.get('/', async (req, res) => {
+  console.log("GET");
+  res.send("Hello World");
 });
 
 const port = parseInt(process.env.PORT) || 3000;
